@@ -1,13 +1,15 @@
 import 'package:blog_app/core/theme/theme_pallete.dart';
-import 'package:blog_app/features/auth/presentation/pages/ai_test.dart';
+//import 'package:blog_app/features/auth/presentation/pages/ai_test.dart';
 import 'package:flutter/material.dart';
 
 class AuthGradientButton extends StatelessWidget {
   final String buttonText;
+  final VoidCallback onPressed;
 
   const AuthGradientButton({
     super.key,
     required this.buttonText,
+    required this.onPressed,
   });
 
   @override
@@ -26,10 +28,7 @@ class AuthGradientButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(8)),
       child: ElevatedButton(
-        onPressed: () {
-          //Navigator.push(
-              //context, MaterialPageRoute(builder: (context) => AiTest()));
-        },
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppPallete.transparentColor,
           shadowColor: AppPallete.transparentColor,
