@@ -17,11 +17,19 @@ class AppTheme {
     appBarTheme: const AppBarTheme(
       backgroundColor: AppPallete.backgroundColor,
     ),
+    chipTheme: const ChipThemeData(
+      side: BorderSide.none,
+      color: WidgetStatePropertyAll(
+        AppPallete.backgroundColor,
+      ),
+    ),
     scaffoldBackgroundColor: AppPallete.backgroundColor,
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(27),
       enabledBorder: _border(),
       focusedBorder: _border(AppPallete.gradient1),
+      errorBorder: _border(AppPallete.errorColor),
+      focusedErrorBorder: _border(AppPallete.errorColor),
     ),
   );
 }
